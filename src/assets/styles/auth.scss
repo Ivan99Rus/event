@@ -1,0 +1,75 @@
+@import './settings';
+
+.authorization {
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 390px;
+    margin: auto;
+  }
+
+  &-title {
+    @include medium;
+    color: $color-primary;
+    margin-bottom: 50px;
+  }
+
+  &-form {
+    width: 100%;
+  }
+
+  &-input {
+    display: block;
+    width: 100%;
+    height: 62px;
+    padding-left: 24px;
+
+    &::placeholder {
+      font-size: 22px;
+      line-height: 26px;
+      color: $color-primary;
+    }
+
+    &:last-of-type {
+      margin-top: 16px;
+    }
+  }
+
+  &-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &-remember {
+    display: flex;
+    align-items: center;
+
+    &__text {
+      margin-left: 11px;
+    }
+
+    &__input {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &-forgot {
+    color: $color-secondary;
+    text-decoration: none;
+  }
+
+  &-btns {
+    margin-top: 40px;
+  }
+
+  &-btn {
+    width: 100%;
+    height: 56px;
+  }
+}

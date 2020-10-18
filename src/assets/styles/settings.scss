@@ -1,0 +1,52 @@
+@import './normalize.scss';
+@import './variables.scss';
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+@mixin reg() {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 400;
+}
+
+  
+@mixin medium() {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+body {
+  @include reg;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.section-title {
+  margin: 0;
+}
+
+.input {
+  background: #E0E0E0;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background: $color-primary;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase ;
+  color: $color-light;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+  &_light {
+    color: $color-secondary;
+    background-color: transparent;
+  }
+}

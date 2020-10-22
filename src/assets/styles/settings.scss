@@ -16,6 +16,17 @@
   font-weight: 500;
 }
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.8s;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
 body {
   @include reg;
   font-size: 14px;
@@ -23,6 +34,10 @@ body {
 }
 
 .section-title {
+  margin: 0;
+}
+
+.paragraph {
   margin: 0;
 }
 
@@ -44,6 +59,9 @@ body {
   transition: 0.3s;
   &:hover {
     opacity: 0.8;
+  }
+  &_bold {
+    @include medium;
   }
   &_light {
     color: $color-secondary;

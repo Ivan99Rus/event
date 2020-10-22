@@ -15,6 +15,16 @@
     @include medium;
     color: $color-primary;
     margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 35px;
+  }
+
+  &-subtitle {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    max-width: 235px;
+    margin-bottom: 40px;
   }
 
   &-form {
@@ -33,8 +43,8 @@
       color: $color-primary;
     }
 
-    &:last-of-type {
-      margin-top: 16px;
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
     }
   }
 

@@ -11,23 +11,41 @@
           <input type="checkbox" id="remember-checkbox" class="authorization-remember__input">
           <label for="remember-checkbox" class="authorization-remember__text">Remember me</label>
         </div>
-        <a href="#" class="authorization-forgot">Forgot?</a>
+        <a 
+          href="#" 
+          class="authorization-forgot"
+          @click.prevent="on_forgot()"
+        >
+          Forgot?
+        </a>
       </div>
       <div class="authorization-btns">
-        <button class="authorization-btn btn">LOG IN</button>
-        <button class="authorization-btn btn btn_light">Sign up</button>
+        <button class="authorization-btn btn_bold btn">LOG IN</button>
+        <button 
+         @click.prevent="on_signup()"
+          class="authorization-btn btn btn_light"
+        >
+          Sign up
+        </button>
       </div>
     </form>
   </div>
 </template>
 
 <script>
-
-
-
 export default {
-  name: 'login'
+  template: '#login',
+  name: 'login',
+  methods: {
+    on_signup() { 
+      this.$emit('change-comp', 'signup-form');
+    }, 
+    on_forgot() { 
+      this.$emit('change-comp', 'forgot-form');
+    }, 
+  }
 }
+
 </script>
 
 <style lang="scss">
